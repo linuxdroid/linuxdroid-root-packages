@@ -2,7 +2,7 @@
 +++ ./lib/config.h	2018-05-15 20:51:48.262434344 +0000
 @@ -0,0 +1,15 @@
 +#define PCI_CONFIG_H
-+#define PCI_ARCH_@TERMUX_ARCH@
++#define PCI_ARCH_@LINUXDROID_ARCH@
 +#define PCI_OS_LINUX
 +#define PCI_HAVE_PM_LINUX_SYSFS
 +#define PCI_HAVE_PM_LINUX_PROC
@@ -13,6 +13,6 @@
 +#define PCI_HAVE_PM_DUMP
 +#define PCI_COMPRESSED_IDS
 +#define PCI_IDS "pci.ids.gz"
-+#define PCI_PATH_IDS_DIR "@TERMUX_PREFIX@/share"
++#define PCI_PATH_IDS_DIR "@LINUXDROID_PREFIX@/share"
 +#define PCI_SHARED_LIB
 +#define PCILIB_VERSION "3.5.6"

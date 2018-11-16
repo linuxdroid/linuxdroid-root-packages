@@ -1,3 +1,3 @@
-[submodule "termux-packages"]
-	path = termux-packages
-	url = git@github.com:termux/termux-packages
+[submodule "linuxdroid-packages"]
+	path = linuxdroid-packages
+	url = git@github.com:linuxdroid/linuxdroid-packages

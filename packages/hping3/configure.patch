@@ -13,7 +13,7 @@
  INSTALL_MANPATH=`echo $MANPATH|cut -f1 -d:`
  if [ "$INSTALL_MANPATH" = "" ]; then
 -	INSTALL_MANPATH="/usr/local/man"
-+	INSTALL_MANPATH="@TERMUX_PREFIX@/share/man"
++	INSTALL_MANPATH="@LINUXDROID_PREFIX@/share/man"
  fi
 -BYTEORDER=`./byteorder -m`
 +BYTEORDER=__LITTLE_ENDIAN_BITFIELD
@@ -64,10 +64,10 @@
  then
 -	LIBPOSTFIX=`ls -1 /usr/local/lib/ /usr/lib | grep 'libtcl[0-9]' | grep so | sed -e 's/\.so.*//g' -e 's/libtcl//g' | sort -r | head -1`
 -	TCL_LIB="-ltcl${LIBPOSTFIX} -lm -lpthread"
-+	LIBPOSTFIX=`ls -1 @TERMUX_PREFIX@/lib | grep 'libtcl[0-9]' | grep so | sed -e 's/\.so.*//g' -e 's/libtcl//g' | sort -r | head -1`
++	LIBPOSTFIX=`ls -1 @LINUXDROID_PREFIX@/lib | grep 'libtcl[0-9]' | grep so | sed -e 's/\.so.*//g' -e 's/libtcl//g' | sort -r | head -1`
 +	TCL_LIB="-ltcl${LIBPOSTFIX} -lm"
  fi
-+TCL_INC="-I@TERMUX_PREFIX@/include"
++TCL_INC="-I@LINUXDROID_PREFIX@/include"
  
  #
  # configurable stuff
